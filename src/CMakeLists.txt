@@ -27,7 +27,8 @@ set(KERNEL_ISO ${CMAKE_PROJECT_NAME}.iso)
 file(GLOB_RECURSE KSRC kernel/src/*.cpp kernel/src/*.c kernel/src/*.s)
 file(GLOB_RECURSE KHDR kernel/include/*.hpp kernel/include/*.h)
 ## Building the kernel binary
-add_executable(${KERNEL_BIN} ${KSRC} ${KHDR})
+add_executable(${KERNEL_BIN} kernel/src/kernel.c ${KSRC} ${KHDR})
+
 set_target_properties(${KERNEL_BIN} PROPERTIES LINK_FLAGS "-T ${CMAKE_SOURCE_DIR}/linker.ld -ffreestanding -O2 -nostdlib -lgcc")
 add_custom_command(TARGET ${KERNEL_BIN} POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_SOURCE_DIR}/bin
@@ -42,3 +43,7 @@ add_dependencies(DongOS.iso DongOS.bin)
 add_custom_command(TARGET ${KERNEL_ISO} POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_SOURCE_DIR}/bin
         COMMAND ${CMAKE_COMMAND} -E copy ${KERNEL_ISO} ${CMAKE_SOURCE_DIR}/bin/)
+
+
+## Set an ENV variable to store OS Directory
+

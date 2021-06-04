@@ -1,1 +1,0 @@
-/home/john/opt/cross/bin/i686-elf-gcc -ffreestanding -O2 -Wall -Wextra -g -T /home/john/Desktop/DongOS/src/linker.ld -ffreestanding -O2 -nostdlib -lgcc CMakeFiles/DongOS.bin.dir/kernel/src/kernel.c.o CMakeFiles/DongOS.bin.dir/kernel/src/start.s.o -o DongOS.bin 

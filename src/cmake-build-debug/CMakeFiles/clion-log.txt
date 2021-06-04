@@ -1,4 +1,0 @@
-/snap/clion/152/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/usr/bin/make -G "CodeBlocks - Unix Makefiles" /home/john/Desktop/DongOS/src
--- Configuring done
--- Generating done
--- Build files have been written to: /home/john/Desktop/DongOS/src/cmake-build-debug
