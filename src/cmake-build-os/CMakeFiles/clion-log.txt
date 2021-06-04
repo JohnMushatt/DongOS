@@ -1,0 +1,4 @@
+/snap/clion/152/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/home/john/opt/cross/bin/i686-elf-gcc -DCMAKE_CXX_COMPILER=/home/john/opt/cross/bin/i686-elf-g++ -G "CodeBlocks - Unix Makefiles" /home/john/Desktop/DongOS/src
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/john/Desktop/DongOS/src/cmake-build-os

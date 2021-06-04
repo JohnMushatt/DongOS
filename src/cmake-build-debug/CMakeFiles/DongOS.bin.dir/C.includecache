@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/john/Desktop/DongOS/src/kernel/include/kernel.h
+
+/home/john/Desktop/DongOS/src/kernel/src/kernel.c
+stdbool.h
+-
+stddef.h
+-
+stdint.h
+-
+../include/kernel.h
+/home/john/Desktop/DongOS/src/kernel/include/kernel.h
+

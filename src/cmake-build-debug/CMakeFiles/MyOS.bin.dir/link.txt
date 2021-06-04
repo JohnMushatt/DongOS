@@ -1,0 +1,1 @@
+/home/john/opt/cross/bin/i686-elf-gcc -ffreestanding -O2 -Wall -Wextra -g -T /home/john/Desktop/DongOS/src/linker.ld -ffreestanding -O2 -nostdlib -lgcc CMakeFiles/MyOS.bin.dir/start.s.o CMakeFiles/MyOS.bin.dir/kernel.c.o -o MyOS.bin 
