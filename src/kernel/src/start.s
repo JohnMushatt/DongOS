@@ -30,11 +30,23 @@ System V ABI standard and de-facto extensions. The compiler will assume the
 stack is properly aligned and failure to align the stack will result in
 undefined behavior.
 */
-.section .bss
+.section .bootstrap_stack, "aw", @nobits
 .align 16
 stack_bottom:
 .skip 16384 # 16 KiB
 stack_top:
+
+
+# Preallocate pages for kernel paging, bootloader might have written to this section
+# so be careful.  Tell bootloader to avoid writing here tho
+
+.section .bss, "aw", @nobits
+		.align 4096 #Page size 4kb
+boot_page_directory:
+		.skip 4096
+boot_page_table_1:
+		.skip 4096
+
  
 /*
 The linker script specifies _start as the entry point to the kernel and the
@@ -58,6 +70,70 @@ _start:
 	machine.
 	*/
  
+	/*
+	Setup paging for kernel now!
+	*/
+
+	# Physical address of page table 1
+	movl $(boot_page_table_1 - 0xC0000000), %edi
+	# Map address 0
+	movl $0, %esi
+
+	# Map 1023 pages, reserve 1024th page for VGA buffer
+	movl $1023, %ecx
+1:
+	# Map kernel 
+	cmpl $_kernel_start, %esi
+	jl 2f
+	cmpl $(_kernel_end - 0xC0000000), %esi
+	jge 3f
+
+	# Map physical address as "present, writable". Note that this maps
+	# .text and .rodata as writable. Mind security and map them as non-writable.
+	movl %esi, %edx
+	orl $0x003, %edx
+	movl %edx, (%edi)
+2:
+	# Begin mapping pages via loop 
+	# Page is 4Kb
+	addl $4096, %esi
+	# PTE is 4 bytes
+	addl $4, %edi
+	loop 1b
+
+3:
+	# Map VGA buffer start
+	movl $(0x000B8000 | 0x003), boot_page_table_1 - 0xC0000000 + 1023 * 4
+
+	# Perform indentity mapping
+	movl $(boot_page_table_1 - 0xC0000000 + 0x003), boot_page_directory - 0xC0000000 + 0
+	movl $(boot_page_table_1 - 0xC0000000 + 0x003), boot_page_directory - 0xC0000000 + 768 *4
+
+
+	movl $(boot_page_directory - 0xC0000000), %ecx
+	movl %ecx, %cr3
+
+	# Enable paging and activate write-protections
+
+	movl %cr0, %ecx
+	orl $0x80010000, %ecx
+	movl %ecx, %cr0
+
+	# Jump to higher half
+	lea 4f, %ecx
+	jmp *%ecx
+
+.section .text
+4:
+	# At this point, paging is fully set up and enabled.
+
+	# Unmap the identity mapping as it is now unnecessary. 
+	movl $0, boot_page_directory + 0
+
+	# Reload crc3 to force a TLB flush so the changes to take effect.
+	movl %cr3, %ecx
+	movl %ecx, %cr3
+
 	/*
 	To set up a stack, we set the esp register to point to the top of the
 	stack (as it grows downwards on x86 systems). This is necessarily done
