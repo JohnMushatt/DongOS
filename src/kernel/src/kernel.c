@@ -27,5 +27,12 @@ void kernel_main(void) {
     kterminal_initialize();
  
     /* Newline support is left as an exercise. */
-    kterminal_writestring("Hello, kernel World!\n");
+
+    kterminal_setcolor(VGA_COLOR_RED);
+    kterminal_writestring("kernel terminal initialized");
+    kterminal_writestring("\ntesting newline\n");
+
+    for(int32_t index = 0; index < 4<<10; index++) {
+        kterminal_writestring("a");
+    }
 }

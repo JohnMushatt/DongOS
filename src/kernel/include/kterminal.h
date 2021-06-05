@@ -24,6 +24,8 @@ void kterminal_initialize(void);
 void kterminal_writestring(const char *data);
 void kterminal_write(const char *data, size_t size);
 void kterminal_setcolor(uint8_t color);
+void kterminal_scroll();
+void kterminal_delete_last_line();
 void kterminal_putentryat(char c, uint8_t color, size_t x, size_t y);
 static inline uint8_t vga_entry_color(enum vga_color fg, enum vga_color bg) {
     return fg | bg << 4;
