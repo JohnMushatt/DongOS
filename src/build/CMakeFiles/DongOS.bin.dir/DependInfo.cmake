@@ -18,7 +18,9 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/john/Desktop/DongOS/src/kernel/src/GDT.c" "CMakeFiles/DongOS.bin.dir/kernel/src/GDT.c.o" "gcc" "CMakeFiles/DongOS.bin.dir/kernel/src/GDT.c.o.d"
   "/home/john/Desktop/DongOS/src/kernel/src/kernel.c" "CMakeFiles/DongOS.bin.dir/kernel/src/kernel.c.o" "gcc" "CMakeFiles/DongOS.bin.dir/kernel/src/kernel.c.o.d"
+  "/home/john/Desktop/DongOS/src/kernel/src/kstdio/kprintf.c" "CMakeFiles/DongOS.bin.dir/kernel/src/kstdio/kprintf.c.o" "gcc" "CMakeFiles/DongOS.bin.dir/kernel/src/kstdio/kprintf.c.o.d"
   "/home/john/Desktop/DongOS/src/kernel/src/kstring.c" "CMakeFiles/DongOS.bin.dir/kernel/src/kstring.c.o" "gcc" "CMakeFiles/DongOS.bin.dir/kernel/src/kstring.c.o.d"
   "/home/john/Desktop/DongOS/src/kernel/src/kterminal.c" "CMakeFiles/DongOS.bin.dir/kernel/src/kterminal.c.o" "gcc" "CMakeFiles/DongOS.bin.dir/kernel/src/kterminal.c.o.d"
   )

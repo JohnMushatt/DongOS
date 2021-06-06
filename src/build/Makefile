@@ -142,6 +142,30 @@ DongOS.iso/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DongOS.iso.dir/build.make CMakeFiles/DongOS.iso.dir/build
 .PHONY : DongOS.iso/fast
 
+kernel/src/GDT.o: kernel/src/GDT.c.o
+.PHONY : kernel/src/GDT.o
+
+# target to build an object file
+kernel/src/GDT.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DongOS.bin.dir/build.make CMakeFiles/DongOS.bin.dir/kernel/src/GDT.c.o
+.PHONY : kernel/src/GDT.c.o
+
+kernel/src/GDT.i: kernel/src/GDT.c.i
+.PHONY : kernel/src/GDT.i
+
+# target to preprocess a source file
+kernel/src/GDT.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DongOS.bin.dir/build.make CMakeFiles/DongOS.bin.dir/kernel/src/GDT.c.i
+.PHONY : kernel/src/GDT.c.i
+
+kernel/src/GDT.s: kernel/src/GDT.c.s
+.PHONY : kernel/src/GDT.s
+
+# target to generate assembly for a file
+kernel/src/GDT.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DongOS.bin.dir/build.make CMakeFiles/DongOS.bin.dir/kernel/src/GDT.c.s
+.PHONY : kernel/src/GDT.c.s
+
 kernel/src/kernel.o: kernel/src/kernel.c.o
 .PHONY : kernel/src/kernel.o
 
@@ -165,6 +189,30 @@ kernel/src/kernel.s: kernel/src/kernel.c.s
 kernel/src/kernel.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DongOS.bin.dir/build.make CMakeFiles/DongOS.bin.dir/kernel/src/kernel.c.s
 .PHONY : kernel/src/kernel.c.s
+
+kernel/src/kstdio/kprintf.o: kernel/src/kstdio/kprintf.c.o
+.PHONY : kernel/src/kstdio/kprintf.o
+
+# target to build an object file
+kernel/src/kstdio/kprintf.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DongOS.bin.dir/build.make CMakeFiles/DongOS.bin.dir/kernel/src/kstdio/kprintf.c.o
+.PHONY : kernel/src/kstdio/kprintf.c.o
+
+kernel/src/kstdio/kprintf.i: kernel/src/kstdio/kprintf.c.i
+.PHONY : kernel/src/kstdio/kprintf.i
+
+# target to preprocess a source file
+kernel/src/kstdio/kprintf.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DongOS.bin.dir/build.make CMakeFiles/DongOS.bin.dir/kernel/src/kstdio/kprintf.c.i
+.PHONY : kernel/src/kstdio/kprintf.c.i
+
+kernel/src/kstdio/kprintf.s: kernel/src/kstdio/kprintf.c.s
+.PHONY : kernel/src/kstdio/kprintf.s
+
+# target to generate assembly for a file
+kernel/src/kstdio/kprintf.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/DongOS.bin.dir/build.make CMakeFiles/DongOS.bin.dir/kernel/src/kstdio/kprintf.c.s
+.PHONY : kernel/src/kstdio/kprintf.c.s
 
 kernel/src/kstring.o: kernel/src/kstring.c.o
 .PHONY : kernel/src/kstring.o
@@ -232,9 +280,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... DongOS.iso"
 	@echo "... DongOS.bin"
+	@echo "... kernel/src/GDT.o"
+	@echo "... kernel/src/GDT.i"
+	@echo "... kernel/src/GDT.s"
 	@echo "... kernel/src/kernel.o"
 	@echo "... kernel/src/kernel.i"
 	@echo "... kernel/src/kernel.s"
+	@echo "... kernel/src/kstdio/kprintf.o"
+	@echo "... kernel/src/kstdio/kprintf.i"
+	@echo "... kernel/src/kstdio/kprintf.s"
 	@echo "... kernel/src/kstring.o"
 	@echo "... kernel/src/kstring.i"
 	@echo "... kernel/src/kstring.s"

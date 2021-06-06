@@ -82,12 +82,12 @@ clean: CMakeFiles/DongOS.iso.dir/clean
 CMakeFiles/DongOS.bin.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DongOS.bin.dir/build.make CMakeFiles/DongOS.bin.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DongOS.bin.dir/build.make CMakeFiles/DongOS.bin.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/john/Desktop/DongOS/src/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target DongOS.bin"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/john/Desktop/DongOS/src/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target DongOS.bin"
 .PHONY : CMakeFiles/DongOS.bin.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/DongOS.bin.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/john/Desktop/DongOS/src/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/john/Desktop/DongOS/src/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/DongOS.bin.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/john/Desktop/DongOS/src/build/CMakeFiles 0
 .PHONY : CMakeFiles/DongOS.bin.dir/rule
@@ -108,12 +108,12 @@ CMakeFiles/DongOS.bin.dir/clean:
 CMakeFiles/DongOS.iso.dir/all: CMakeFiles/DongOS.bin.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DongOS.iso.dir/build.make CMakeFiles/DongOS.iso.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/DongOS.iso.dir/build.make CMakeFiles/DongOS.iso.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/john/Desktop/DongOS/src/build/CMakeFiles --progress-num=6 "Built target DongOS.iso"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/john/Desktop/DongOS/src/build/CMakeFiles --progress-num=8 "Built target DongOS.iso"
 .PHONY : CMakeFiles/DongOS.iso.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/DongOS.iso.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/john/Desktop/DongOS/src/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/john/Desktop/DongOS/src/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/DongOS.iso.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/john/Desktop/DongOS/src/build/CMakeFiles 0
 .PHONY : CMakeFiles/DongOS.iso.dir/rule

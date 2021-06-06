@@ -16,14 +16,13 @@ set(CMAKE_ASM_COMPILER ${TOOLS}/bin/i686-elf-as)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_C_STANDARD 11)
-set(CMAKE_CXX_FLAGS "-ffreestanding -O2 -Wall -Wextra -fno-exceptions -fno-rtti")
+set(CMAKE_CXX_FLAGS "-ffreestanding -O2 -Wall -Wextra -fno-exceptions -fno-rtti -D__is_libk")
 set(CMAKE_C_FLAGS "-ffreestanding -O2 -Wall -Wextra")
 
 set(KERNEL_BIN "DongOS.bin")
 set(KERNEL_ISO ${CMAKE_PROJECT_NAME}.iso)
 
-## A simple lib to test C compilation and linking
-#add_library(mylib mylib.c)
+
 file(GLOB_RECURSE KSRC kernel/src/*.cpp kernel/src/*.c kernel/src/*.s)
 file(GLOB_RECURSE KHDR kernel/include/*.hpp kernel/include/*.h)
 ## Building the kernel binary
@@ -45,5 +44,4 @@ add_custom_command(TARGET ${KERNEL_ISO} POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy ${KERNEL_ISO} ${CMAKE_SOURCE_DIR}/bin/)
 
 
-## Set an ENV variable to store OS Directory
 

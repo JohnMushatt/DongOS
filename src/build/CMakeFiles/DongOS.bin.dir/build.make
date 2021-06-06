@@ -83,10 +83,38 @@ CMakeFiles/DongOS.bin.dir/kernel/src/kernel.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/DongOS.bin.dir/kernel/src/kernel.c.s"
 	/home/john/opt/cross/bin/i686-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/john/Desktop/DongOS/src/kernel/src/kernel.c -o CMakeFiles/DongOS.bin.dir/kernel/src/kernel.c.s
 
+CMakeFiles/DongOS.bin.dir/kernel/src/GDT.c.o: CMakeFiles/DongOS.bin.dir/flags.make
+CMakeFiles/DongOS.bin.dir/kernel/src/GDT.c.o: ../kernel/src/GDT.c
+CMakeFiles/DongOS.bin.dir/kernel/src/GDT.c.o: CMakeFiles/DongOS.bin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/john/Desktop/DongOS/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/DongOS.bin.dir/kernel/src/GDT.c.o"
+	/home/john/opt/cross/bin/i686-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/DongOS.bin.dir/kernel/src/GDT.c.o -MF CMakeFiles/DongOS.bin.dir/kernel/src/GDT.c.o.d -o CMakeFiles/DongOS.bin.dir/kernel/src/GDT.c.o -c /home/john/Desktop/DongOS/src/kernel/src/GDT.c
+
+CMakeFiles/DongOS.bin.dir/kernel/src/GDT.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/DongOS.bin.dir/kernel/src/GDT.c.i"
+	/home/john/opt/cross/bin/i686-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/john/Desktop/DongOS/src/kernel/src/GDT.c > CMakeFiles/DongOS.bin.dir/kernel/src/GDT.c.i
+
+CMakeFiles/DongOS.bin.dir/kernel/src/GDT.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/DongOS.bin.dir/kernel/src/GDT.c.s"
+	/home/john/opt/cross/bin/i686-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/john/Desktop/DongOS/src/kernel/src/GDT.c -o CMakeFiles/DongOS.bin.dir/kernel/src/GDT.c.s
+
+CMakeFiles/DongOS.bin.dir/kernel/src/kstdio/kprintf.c.o: CMakeFiles/DongOS.bin.dir/flags.make
+CMakeFiles/DongOS.bin.dir/kernel/src/kstdio/kprintf.c.o: ../kernel/src/kstdio/kprintf.c
+CMakeFiles/DongOS.bin.dir/kernel/src/kstdio/kprintf.c.o: CMakeFiles/DongOS.bin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/john/Desktop/DongOS/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/DongOS.bin.dir/kernel/src/kstdio/kprintf.c.o"
+	/home/john/opt/cross/bin/i686-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/DongOS.bin.dir/kernel/src/kstdio/kprintf.c.o -MF CMakeFiles/DongOS.bin.dir/kernel/src/kstdio/kprintf.c.o.d -o CMakeFiles/DongOS.bin.dir/kernel/src/kstdio/kprintf.c.o -c /home/john/Desktop/DongOS/src/kernel/src/kstdio/kprintf.c
+
+CMakeFiles/DongOS.bin.dir/kernel/src/kstdio/kprintf.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/DongOS.bin.dir/kernel/src/kstdio/kprintf.c.i"
+	/home/john/opt/cross/bin/i686-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/john/Desktop/DongOS/src/kernel/src/kstdio/kprintf.c > CMakeFiles/DongOS.bin.dir/kernel/src/kstdio/kprintf.c.i
+
+CMakeFiles/DongOS.bin.dir/kernel/src/kstdio/kprintf.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/DongOS.bin.dir/kernel/src/kstdio/kprintf.c.s"
+	/home/john/opt/cross/bin/i686-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/john/Desktop/DongOS/src/kernel/src/kstdio/kprintf.c -o CMakeFiles/DongOS.bin.dir/kernel/src/kstdio/kprintf.c.s
+
 CMakeFiles/DongOS.bin.dir/kernel/src/kstring.c.o: CMakeFiles/DongOS.bin.dir/flags.make
 CMakeFiles/DongOS.bin.dir/kernel/src/kstring.c.o: ../kernel/src/kstring.c
 CMakeFiles/DongOS.bin.dir/kernel/src/kstring.c.o: CMakeFiles/DongOS.bin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/john/Desktop/DongOS/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/DongOS.bin.dir/kernel/src/kstring.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/john/Desktop/DongOS/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/DongOS.bin.dir/kernel/src/kstring.c.o"
 	/home/john/opt/cross/bin/i686-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/DongOS.bin.dir/kernel/src/kstring.c.o -MF CMakeFiles/DongOS.bin.dir/kernel/src/kstring.c.o.d -o CMakeFiles/DongOS.bin.dir/kernel/src/kstring.c.o -c /home/john/Desktop/DongOS/src/kernel/src/kstring.c
 
 CMakeFiles/DongOS.bin.dir/kernel/src/kstring.c.i: cmake_force
@@ -100,7 +128,7 @@ CMakeFiles/DongOS.bin.dir/kernel/src/kstring.c.s: cmake_force
 CMakeFiles/DongOS.bin.dir/kernel/src/kterminal.c.o: CMakeFiles/DongOS.bin.dir/flags.make
 CMakeFiles/DongOS.bin.dir/kernel/src/kterminal.c.o: ../kernel/src/kterminal.c
 CMakeFiles/DongOS.bin.dir/kernel/src/kterminal.c.o: CMakeFiles/DongOS.bin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/john/Desktop/DongOS/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/DongOS.bin.dir/kernel/src/kterminal.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/john/Desktop/DongOS/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/DongOS.bin.dir/kernel/src/kterminal.c.o"
 	/home/john/opt/cross/bin/i686-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/DongOS.bin.dir/kernel/src/kterminal.c.o -MF CMakeFiles/DongOS.bin.dir/kernel/src/kterminal.c.o.d -o CMakeFiles/DongOS.bin.dir/kernel/src/kterminal.c.o -c /home/john/Desktop/DongOS/src/kernel/src/kterminal.c
 
 CMakeFiles/DongOS.bin.dir/kernel/src/kterminal.c.i: cmake_force
@@ -113,7 +141,7 @@ CMakeFiles/DongOS.bin.dir/kernel/src/kterminal.c.s: cmake_force
 
 CMakeFiles/DongOS.bin.dir/kernel/src/start.s.o: CMakeFiles/DongOS.bin.dir/flags.make
 CMakeFiles/DongOS.bin.dir/kernel/src/start.s.o: ../kernel/src/start.s
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/john/Desktop/DongOS/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building ASM object CMakeFiles/DongOS.bin.dir/kernel/src/start.s.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/john/Desktop/DongOS/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building ASM object CMakeFiles/DongOS.bin.dir/kernel/src/start.s.o"
 	/home/john/opt/cross/bin/i686-elf-as $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/DongOS.bin.dir/kernel/src/start.s.o -c /home/john/Desktop/DongOS/src/kernel/src/start.s
 
 CMakeFiles/DongOS.bin.dir/kernel/src/start.s.i: cmake_force
@@ -127,6 +155,8 @@ CMakeFiles/DongOS.bin.dir/kernel/src/start.s.s: cmake_force
 # Object files for target DongOS.bin
 DongOS_bin_OBJECTS = \
 "CMakeFiles/DongOS.bin.dir/kernel/src/kernel.c.o" \
+"CMakeFiles/DongOS.bin.dir/kernel/src/GDT.c.o" \
+"CMakeFiles/DongOS.bin.dir/kernel/src/kstdio/kprintf.c.o" \
 "CMakeFiles/DongOS.bin.dir/kernel/src/kstring.c.o" \
 "CMakeFiles/DongOS.bin.dir/kernel/src/kterminal.c.o" \
 "CMakeFiles/DongOS.bin.dir/kernel/src/start.s.o"
@@ -135,12 +165,14 @@ DongOS_bin_OBJECTS = \
 DongOS_bin_EXTERNAL_OBJECTS =
 
 DongOS.bin: CMakeFiles/DongOS.bin.dir/kernel/src/kernel.c.o
+DongOS.bin: CMakeFiles/DongOS.bin.dir/kernel/src/GDT.c.o
+DongOS.bin: CMakeFiles/DongOS.bin.dir/kernel/src/kstdio/kprintf.c.o
 DongOS.bin: CMakeFiles/DongOS.bin.dir/kernel/src/kstring.c.o
 DongOS.bin: CMakeFiles/DongOS.bin.dir/kernel/src/kterminal.c.o
 DongOS.bin: CMakeFiles/DongOS.bin.dir/kernel/src/start.s.o
 DongOS.bin: CMakeFiles/DongOS.bin.dir/build.make
 DongOS.bin: CMakeFiles/DongOS.bin.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/john/Desktop/DongOS/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable DongOS.bin"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/john/Desktop/DongOS/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable DongOS.bin"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/DongOS.bin.dir/link.txt --verbose=$(VERBOSE)
 	/snap/cmake/876/bin/cmake -E make_directory /home/john/Desktop/DongOS/src/bin
 	/snap/cmake/876/bin/cmake -E copy DongOS.bin /home/john/Desktop/DongOS/src/bin/

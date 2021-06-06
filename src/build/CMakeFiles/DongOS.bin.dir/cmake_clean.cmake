@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/DongOS.bin.dir/kernel/src/GDT.c.o"
+  "CMakeFiles/DongOS.bin.dir/kernel/src/GDT.c.o.d"
   "CMakeFiles/DongOS.bin.dir/kernel/src/kernel.c.o"
   "CMakeFiles/DongOS.bin.dir/kernel/src/kernel.c.o.d"
+  "CMakeFiles/DongOS.bin.dir/kernel/src/kstdio/kprintf.c.o"
+  "CMakeFiles/DongOS.bin.dir/kernel/src/kstdio/kprintf.c.o.d"
   "CMakeFiles/DongOS.bin.dir/kernel/src/kstring.c.o"
   "CMakeFiles/DongOS.bin.dir/kernel/src/kstring.c.o.d"
   "CMakeFiles/DongOS.bin.dir/kernel/src/kterminal.c.o"

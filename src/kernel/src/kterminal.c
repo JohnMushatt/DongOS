@@ -55,13 +55,14 @@ void terminal_putchar(char c) {
 
         if (++terminal_column == VGA_WIDTH) {
             terminal_column = 0;
-            if (++terminal_row == VGA_HEIGHT)
+            if (++terminal_row == VGA_HEIGHT) {
 
                 for(int32_t LineIndex = 1; LineIndex < VGA_HEIGHT -1; LineIndex) {
                     kterminal_scroll(LineIndex);
                 }
                 kterminal_delete_last_line();
                 terminal_row = VGA_HEIGHT-1;
+            }
         }
     }
 
