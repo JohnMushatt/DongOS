@@ -3,6 +3,7 @@
 #include <stdint.h>
 #include "../include/kterminal.h"
 #include "../include/kernel.h"
+#include "../include/kstdio.h"
 /* Check if the compiler thinks you are targeting the wrong operating system. */
 #if defined(__linux__)
 #error "You are not using a cross-compiler, you will most certainly run into trouble"
@@ -30,10 +31,8 @@ void kernel_main(void) {
 
     kterminal_setcolor(VGA_COLOR_RED);
     kterminal_writestring("kernel terminal initialized");
-    kterminal_writestring("\ntesting newline\n");
-    /*
-    for(int32_t index = 0; index < 4<<10; index++) {
-        kterminal_writestring("a");
-    }
-    */
+    kterminal_setcolor(VGA_COLOR_WHITE);
+
+    kprintf("\n%s\n","Testing kprintf");
+
 }

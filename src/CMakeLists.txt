@@ -17,14 +17,14 @@ set(CMAKE_ASM_COMPILER ${TOOLS}/bin/i686-elf-as)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_FLAGS "-ffreestanding -O2 -Wall -Wextra -fno-exceptions -fno-rtti -D__is_libk")
-set(CMAKE_C_FLAGS "-ffreestanding -O2 -Wall -Wextra")
+set(CMAKE_C_FLAGS "-ffreestanding -O2 -Wall -Wextra -D__is_libk")
 
 set(KERNEL_BIN "DongOS.bin")
 set(KERNEL_ISO ${CMAKE_PROJECT_NAME}.iso)
 
 
 file(GLOB_RECURSE KSRC kernel/src/*.cpp kernel/src/*.c kernel/src/*.s)
-file(GLOB_RECURSE KHDR kernel/include/*.hpp kernel/include/*.h)
+file(GLOB_RECURSE KHDR kernel/include/**.hpp kernel/include/**.h)
 ## Building the kernel binary
 add_executable(${KERNEL_BIN} kernel/src/kernel.c ${KSRC} ${KHDR})
 

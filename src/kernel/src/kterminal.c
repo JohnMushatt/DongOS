@@ -91,7 +91,7 @@ void kterminal_scroll(int LineNum) {
         *(LoopIndex - (VGA_WIDTH *2)) = c;
     }
 }
-void terminal_write(const char* data, size_t size)
+void kterminal_write(const char* data, size_t size)
 {
     for (size_t i = 0; i < size; i++)
         terminal_putchar(data[i]);
@@ -99,5 +99,5 @@ void terminal_write(const char* data, size_t size)
 
 void kterminal_writestring(const char* data)
 {
-    terminal_write(data, strlen(data));
+    kterminal_write(data, strlen(data));
 }

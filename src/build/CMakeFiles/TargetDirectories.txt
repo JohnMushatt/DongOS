@@ -1,4 +1,0 @@
-/home/john/Desktop/DongOS/src/build/CMakeFiles/rebuild_cache.dir
-/home/john/Desktop/DongOS/src/build/CMakeFiles/edit_cache.dir
-/home/john/Desktop/DongOS/src/build/CMakeFiles/DongOS.bin.dir
-/home/john/Desktop/DongOS/src/build/CMakeFiles/DongOS.iso.dir
